@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-
 html {
   height: 100%;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -13,17 +14,7 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: Nunito;
-}
-
-h1 {
-  font-size: 250%
-}
-
-p {
-  font-size: 140%;
-  line-height: 150%;
-  color: #333;
+  font-family: "Source Sans Pro";
 }
 
 .slide {
@@ -32,25 +23,8 @@ p {
   min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.7);
   transform-style: inherit;
-}
-
-img {
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  width: 320px;
-  height: 240px;
-  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
-  padding: 10px;
-  border-radius: 5px;
-  background: rgba(240, 230, 220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
-
-img:last-of-type {
-  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
 }
 
 .slide:before {
@@ -60,44 +34,103 @@ img:last-of-type {
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.7);
 }
 
-.title {
-  width: 50%;
-  padding: 5%;
-  border-radius: 5px;
-  background: rgba(240, 230, 220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
-
-.slide:nth-child(2n) .title {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.slide:nth-child(2n+1) .title {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.slide,
-.slide:before {
-  background: 50% 50% / cover;
-}
-
-.header {
-  text-align: center;
-  font-size: 175%;
-  color: #fff;
-  text-shadow: 0 2px 2px #000;
-}
-
+/************************ SLIDE1 *************************/
 #slide1 {
   background-image: url("../img/fondoUno.svg");
   transform: translateZ(-1px) scale(2);
 }
+#slide1 .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#slide1 .container .textoDescripcion {
+  width: 50%;
+  height: 30vh;
+  align-items: flex-start;
+}
+#slide1 .container .textoDescripcion .titulo {
+  font-weight: 600;
+  font-size: 5vh;
+  color: #55abe9;
+}
+#slide1 .container .textoDescripcion .descripcion {
+  position: relative;
+  font-weight: 300;
+  font-size: 5vh;
+  color: #55abe9;
+}
+#slide1 .container .textoDescripcion .descripcion button {
+  padding: 15px;
+  width: 400px;
+  font-size: 3vh;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: #FFF;
+  border-radius: 8px;
+  background: #197ABF;
+  cursor: pointer;
+}
+#slide1 .container .imagenComputadora {
+  width: 50%;
+  height: 80vh;
+  background: url("../img/imgComputadora.svg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
 
+#slide1 .logoEmpresa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 200px;
+  background: url("../img/logoSpredBlanco.svg") no-repeat;
+  background-size: contain;
+  background-position: -35px 5vh;
+  cursor: pointer;
+}
+
+/************************ SLIDE1 *************************/
+/******************* MENU NAVEGACION ******************/
+.menuNavegacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 999;
+}
+.menuNavegacion ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+}
+.menuNavegacion ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  color: #197ABF;
+  cursor: pointer;
+  font-size: 15pt;
+  font-weight: 500;
+  height: 100px;
+}
+.menuNavegacion ul li i {
+  font-size: 20pt;
+}
+
+/******************* MENU NAVEGACION ******************/
 #slide2 {
   background-image: url("../img/fondoUno.svg");
   z-index: 2;
@@ -111,3 +144,5 @@ img:last-of-type {
 #slide4 {
   background: #222;
 }
+
+/*# sourceMappingURL=main.css.map */
