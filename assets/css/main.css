@@ -11,7 +11,7 @@ body {
   padding: 0;
   perspective: 1px;
   transform-style: preserve-3d;
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Source Sans Pro";
@@ -19,7 +19,7 @@ body {
 
 .slide {
   position: relative;
-  padding: 25vh 10%;
+  padding: 20vh 10%;
   min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
@@ -37,10 +37,45 @@ body {
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.7);
 }
 
+/******************* MENU NAVEGACION ******************/
+.menuNavegacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 999;
+}
+.menuNavegacion ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+}
+.menuNavegacion ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  color: #135d92;
+  cursor: pointer;
+  font-size: 15pt;
+  font-weight: 500;
+  height: 100px;
+}
+.menuNavegacion ul li i {
+  font-size: 20pt;
+}
+
+/******************* MENU NAVEGACION ******************/
 /************************ SLIDE1 *************************/
 #slide1 {
   background-image: url("../img/fondoUno.svg");
   transform: translateZ(-1px) scale(2);
+  background-size: cover;
+  z-index: 2;
 }
 #slide1 .container {
   display: flex;
@@ -93,7 +128,7 @@ body {
   height: 200px;
   background: url("../img/logoSpredBlanco.svg") no-repeat;
   background-size: contain;
-  background-position: -35px 5vh;
+  background-position: -35px 2vh;
   cursor: pointer;
 }
 
@@ -150,44 +185,14 @@ body {
 }
 
 /************************** FIN SLIDE2 **************************/
-/******************* MENU NAVEGACION ******************/
-.menuNavegacion {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  z-index: 999;
-}
-.menuNavegacion ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: flex-end;
-}
-.menuNavegacion ul li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  color: #135d92;
-  cursor: pointer;
-  font-size: 15pt;
-  font-weight: 500;
-  height: 100px;
-}
-.menuNavegacion ul li i {
-  font-size: 20pt;
+/************************** SLIDE3 **************************/
+#slide3 {
+  background: url("../img/fondoTres.svg") no-repeat;
+  background-size: cover;
+  z-index: 3;
 }
 
-/******************* MENU NAVEGACION ******************/
-#slide3:before {
-  background-image: url("https://lorempixel.com/640/480/abstract/5/");
-  transform: translateZ(-1px) scale(2);
-}
-
+/************************** FIN SLIDE3 **************************/
 #slide4 {
   background: #222;
 }
