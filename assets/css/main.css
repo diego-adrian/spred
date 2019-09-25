@@ -9,23 +9,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  height: 100vh;
-  min-height: 100vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
   font-family: "Source Sans Pro";
-}
-
-.slide {
-  position: relative;
-  padding: 20vh 10%;
-  min-height: 100vh;
-  width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
-  transform-style: inherit;
+  min-height: 100vh;
 }
 
 /******************* MENU NAVEGACION ******************/
@@ -35,7 +21,7 @@ body {
   left: 0;
   right: 0;
   height: 100px;
-  z-index: 999;
+  z-index: 7;
 }
 .menuNavegacion ul {
   list-style: none;
@@ -49,7 +35,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 160px;
   color: #135d92;
   cursor: pointer;
   font-size: 15pt;
@@ -61,37 +47,59 @@ body {
 }
 
 /******************* MENU NAVEGACION ******************/
-/************************ SLIDE1 *************************/
-#slide1 {
+.container-main {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  /************************ SLIDE1 *************************/
+  /************************ SLIDE1 *************************/
+  /************************** SLIDE2 **************************/
+  /************************** FIN SLIDE2 **************************/
+  /************************** SLIDE3 **************************/
+  /************************** FIN SLIDE3 **************************/
+}
+.container-main .slide {
+  position: relative;
+  padding: 20vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  transform-style: inherit;
+}
+.container-main #slide1 {
   background-image: url("../img/fondoUno.svg");
   transform: translateZ(-1px) scale(2);
   background-size: cover;
   z-index: 1;
 }
-#slide1 .container {
+.container-main #slide1 .container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-#slide1 .container .textoDescripcion {
+.container-main #slide1 .container .textoDescripcion {
   width: 50%;
   height: 30vh;
   align-items: flex-start;
 }
-#slide1 .container .textoDescripcion .titulo {
+.container-main #slide1 .container .textoDescripcion .titulo {
   font-weight: 600;
   font-size: 5vh;
   color: #55abe9;
 }
-#slide1 .container .textoDescripcion .descripcion {
+.container-main #slide1 .container .textoDescripcion .descripcion {
   position: relative;
   font-weight: 300;
   font-size: 5vh;
   color: #55abe9;
 }
-#slide1 .container .textoDescripcion .descripcion button {
+.container-main #slide1 .container .textoDescripcion .descripcion button {
   padding: 15px;
   width: 400px;
   font-size: 3vh;
@@ -103,15 +111,14 @@ body {
   background: #197ABF;
   cursor: pointer;
 }
-#slide1 .container .imagenComputadora {
+.container-main #slide1 .container .imagenComputadora {
   width: 50%;
   height: 80vh;
   background: url("../img/imgComputadora.svg") no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-
-#slide1 .logoEmpresa {
+.container-main #slide1 .logoEmpresa {
   position: fixed;
   top: 0;
   left: 0;
@@ -119,18 +126,15 @@ body {
   height: 200px;
   background: url("../img/logoSpredBlanco.svg") no-repeat;
   background-size: contain;
-  background-position: -35px 2vh;
+  background-position: -35px 0%;
   cursor: pointer;
 }
-
-/************************ SLIDE1 *************************/
-/************************** SLIDE2 **************************/
-#slide2 {
+.container-main #slide2 {
   background: url("../img/fondoDos.svg") no-repeat;
   background-size: cover;
   z-index: 2;
 }
-#slide2 .container {
+.container-main #slide2 .container {
   width: 80%;
   margin: auto;
   height: 50vh;
@@ -139,7 +143,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-#slide2 .container .icono {
+.container-main #slide2 .container .icono {
   flex-grow: 1;
   height: 40vh;
   display: flex;
@@ -147,44 +151,39 @@ body {
   align-items: center;
   justify-content: center;
 }
-#slide2 .container .icono:nth-child(1) .imgSVG {
+.container-main #slide2 .container .icono:nth-child(1) .imgSVG {
   background: url("../img/iconoPasoUno.svg") no-repeat;
   background-size: 350%;
   width: 100%;
   height: 250px;
   background-position: 50%;
 }
-#slide2 .container .icono:nth-child(2) .imgSVG {
+.container-main #slide2 .container .icono:nth-child(2) .imgSVG {
   background: url("../img/iconoPasoDos.svg") no-repeat;
   background-size: 350%;
   width: 100%;
   height: 250px;
   background-position: 50%;
 }
-#slide2 .container .icono:nth-child(3) .imgSVG {
+.container-main #slide2 .container .icono:nth-child(3) .imgSVG {
   background: url("../img/iconoPasoTres.svg") no-repeat;
   background-size: 350%;
   width: 100%;
   height: 250px;
   background-position: 50%;
 }
-#slide2 .container .icono section {
+.container-main #slide2 .container .icono section {
   font-size: 3.5vh;
   color: #FFF;
   font-weight: 600;
   text-align: center;
 }
-
-/************************** FIN SLIDE2 **************************/
-/************************** SLIDE3 **************************/
-#slide3 {
+.container-main #slide3 {
   background: url("../img/fondoTres.svg") no-repeat;
   background-size: cover;
   z-index: 3;
 }
-
-/************************** FIN SLIDE3 **************************/
-#slide4 {
+.container-main #slide4 {
   background: #222;
 }
 
