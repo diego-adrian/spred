@@ -4,20 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="./assets/js/main.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>:: Spred ::</title>
 </head>
 <body>  
   <nav class="menuNavegacion">
     <ul>
-      <li><i class="fa fa-home" aria-hidden="true"></i></li>
-      <li>Anuncia</li>
-      <li>¿Cómo funciona?</li>
-      <li>Contacto</li>
-      <li><i class="fa fa-user-circle" aria-hidden="true"></i> Ignacio</li>
+      <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li><a href="#slide2" id="anuncia">Anuncia</a></li>
+      <li><a href="#slide3">¿Cómo funciona?</a></li>
+      <li><a href="#slide4">Contacto</a></li>
+      <li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Ignacio</a></li>
     </ul>
   </nav>
   <section class="container-main">
@@ -57,13 +56,63 @@
     <div id="slide3" class="slide">
       <section class="container">
         <section class="titulo">¿ Listo para empezar ?</section>
-        <section class="video"></section>
+        <section class="video">
+          Video Tutorial
+        </section>
       </section>
     </div>
     
     <div id="slide4" class="slide">
-      <h1>The End</h1>
+      <section class="logoEmpresa"></section>
+      <div class="container">
+        <section class="textoDescripcion">
+          <section class="titulo">
+            Sobre nosotros..
+          </section>
+          <section class="descripcion">
+            Spred es una plataforma que te ayuda a realizar publicaciones en periódicos desde donde te encuentres. <br/>
+            Olvidate de las largas colas, los horarios de atencion o tener que interrumpir tus actividades. <br/>
+            En Spred encontraras los mejores periodicos en un solo lugar. <br/>
+            Podras crear publicaciones en segundos y desde donde estes <br/>
+            <button>Empieza ahora</button>
+          </section>
+        </section>
+        <section class="imagenComputadora"></section>
+      </div>
+    </div>
+
+    <div id="slide5" class="slide">
+      <section class="container">
+        <section class="logo"></section>
+        <section class="titulo">LA SEGURIDAD DE TUS DATOS, ES NUESTRA PRIORIDAD</section>
+        <section class="descripcion">
+          Nuestra plataforma utiliza los servicios de Google Cloud, lider mundial en servicios web con los mas altos estandares
+          de disponibilidad, seguridad y certificados de confianza. <br/>
+          Tus pagos se encuentran protegidos y seguros en Spred
+        </section>
+      </section>
+    </div>
+
+    <div id="slide6" class="slide">
+      <section class="logoAbajo">
+        <section></section>
+      </section>
+      <section class="container">
+        <section class="imagen"></section>
+        <section class="formularioContacto">
+          <section>Dudas, Contactanos</section>
+          <form action="#">
+            <input type="text" name="nombre" placeholder="Nombre"/>
+            <input type="email" name="email" placeholder="Email"/>
+            <input type="tel" name="telefono" placeholder="Telefono"/>
+            <textarea name="mensaje" cols="3" rows="3" placeholder="Mensaje"></textarea>
+            <button>Enviar</button>
+          </form>
+        </section>
+      </section>
     </div>
   </section>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
