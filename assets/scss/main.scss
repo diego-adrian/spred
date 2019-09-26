@@ -15,403 +15,870 @@ body {
   padding: 0;
   font-family: 'Source Sans Pro';
 }
+/************** PARA DISPOSITIVOS PEQUEÑOS *******************/
 
- /******************* MENU NAVEGACION ******************/
- .menuNavegacion {
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   height: 100px;
-   z-index: 7;
-   
-   ul {
-     list-style: none;
-     display: flex;
-     flex-direction: row;
-     align-content: center;
-     justify-content: flex-end;
-     margin-top: 30px;
-     li {
+@media screen and (min-width: 1px) and (max-width: 700px) {
+  .menuNavegacion {
+    display: none;
+  }
+  .mostrarMenuMobile {
+    display: block !important;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    background: $fondoAzul;
+    ul {
+      list-style: none;
+      padding-left: 5px;
+      margin-top: 50px;
+      li {
+        width: calc(92% - 5px);
         a {
           text-decoration: none;
-          color: darken($textoAzul, 10);
+          color: $fondoTurqueza;
         }
-       display: flex;
-       flex-direction: row;
-       justify-content: center;
-       align-items: center;
-       width: 130px;
-       cursor: pointer;
-       font-size: 11pt;
-       font-weight: 600;
-       height: 30px;
-
-       i {
-         font-size: 20pt;
-       }
-
-       &:nth-child(1) {
-          width: 50px;
-       }
-       &:nth-child(4) {
-          border-right: 1px solid $fondoTurqueza;
-       }
-     }
-   }
- }
-
- /******************* MENU NAVEGACION ******************/
-.container-main {
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 100vh;
-  min-height: 100vh;
-  .slide {
-    position: relative;
-    padding: 20vh 10%;
-    min-height: 100vh;
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-    // box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    transform-style: inherit;
-  }
-  
-  /************************ SLIDE1 *************************/
-  #slide1 {
-    background: url("../img/fondoUno.svg") no-repeat;
-    transform: translateZ(-1px) scale(2);
-    background-size: cover;
-    z-index: 1;
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      .textoDescripcion {
-        width: 50%;
-        height: 30vh;
-        align-items: flex-start;
-        .titulo {
-          font-weight: 600;
-          font-style: normal;
-          font-size: 5vh;
-          color: lighten($textoAzul, 20);
-        }
-        .descripcion {
-          position: relative;
-          font-weight: 300;
-          font-size: 5vh;
-          color: lighten($textoAzul, 20);
-          button {
-            margin-top: 20px;
-            padding: 15px;
-            width: 400px;
-            font-size: 3vh;
-            font-weight: 600;
-            outline: none;
-            border: none;
-            color: $textoBlanco;
-            border-radius: 8px;
-            background: $textoAzul;
-            cursor: pointer;
-          }
-        }
-      }
-      .imagenComputadora {
-        width: 50%;
-        height: 90vh;
-        background: url('../img/imgComputadora.svg') no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
+        padding: 10px;
+        border-bottom: 1px solid rgba($color: $textoBlanco, $alpha: .5);
       }
     }
   }
-  
-  #slide1 {
-    .logoEmpresa {
+  .menuNavegacionMobile {
+    .icono {
       position: fixed;
       top: 0;
       left: 0;
-      width: 20vw;
-      height: 200px;
-      background: url('../img/logoSpredBlanco.svg') no-repeat;
-      background-size: contain;
-      background-position: -35px 0%;
-      cursor: pointer;
-    }
-  }
-  
-  /************************ SLIDE1 *************************/
-  
-  /************************** SLIDE2 **************************/
-  #slide2 {
-    background: url("../img/fondoDos.svg") no-repeat;
-    background-size: cover;
-    z-index: 2;
-    .container {
-      width: 80%;
-      margin: auto;
-      height: 50vh;
+      width: 50px;
+      height: 50px;
+      z-index: 11;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      .icono {
-        flex-grow: 1;
-        height: 40vh;
+      i {
+        font-size: 20px;
+        color: $textoBlanco;
+        cursor: pointer;
+      }
+    }
+    #menuLateral {
+      display: none;
+    }
+  }
+
+  /******************* MENU NAVEGACION ******************/
+  .container-main {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    min-height: 100vh;
+
+    .slide {
+      position: relative;
+      padding: 20vh 10%;
+      min-height: 100vh;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      // box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+      transform-style: inherit;
+    }
+
+    /************************ SLIDE1 *************************/
+    #slide1 {
+      background: url("../img/fondoUno.svg") no-repeat;
+      background-size: cover;
+      z-index: 1;
+
+      .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        &:nth-child(1) {
-          .imgSVG {
-            background: url('../img/iconoPasoUno.svg') no-repeat;
-            background-size: 350%;
-            width: 100%;
-            height: 250px;
-            background-position: 50%;
+        width: 100%;
+        text-align: center;
+        .textoDescripcion {
+          order: 2;
+          width: 100%;
+          height: 30vh;
+          align-items: center;
+
+          .titulo {
+            font-weight: 600;
+            font-style: normal;
+            font-size: 23px;
+            color: lighten($textoAzul, 20);
+          }
+
+          .descripcion {
+            position: relative;
+            font-weight: 300;
+            font-size: 23px;
+            color: lighten($textoAzul, 20);
+
+            button {
+              margin-top: 20px;
+              padding: 15px;
+              width: 80%;
+              font-size: 3vh;
+              font-weight: 600;
+              outline: none;
+              border: none;
+              color: $textoBlanco;
+              border-radius: 8px;
+              background: $textoAzul;
+              cursor: pointer;
+              margin: auto;
+            }
           }
         }
-        &:nth-child(2) {
-          .imgSVG {
-            background: url('../img/iconoPasoDos.svg') no-repeat;
-            background-size: 350%;
-            width: 100%;
-            height: 250px;
-            background-position: 50%;
+
+        .imagenComputadora {
+          order: 1;
+          width: 100%;
+          height: 40vh;
+          background: url('../img/imgComputadora.svg') no-repeat;
+          background-size: contain;
+          background-position: 50% 50%;
+        }
+      }
+    }
+
+    #slide1 {
+      .logoEmpresa {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 100px;
+        background: url('../img/logoSpredBlanco.svg') no-repeat;
+        background-size: cover;
+        background-position: 0% -22px;
+        cursor: pointer;
+      }
+    }
+
+    /************************ SLIDE1 *************************/
+
+    /************************** SLIDE2 **************************/
+    #slide2 {
+      background: url("../img/fondoDos.svg") no-repeat;
+      background-size: cover;
+      z-index: 2;
+
+      .container {
+        width: 80%;
+        margin: auto;
+        height: 74vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icono {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 30vh;
+          &:nth-child(1) {
+            .imgSVG {
+              background: url('../img/iconoPasoUno.svg') no-repeat;
+              background-size: 300%;
+              width: 100%;
+              height: 250px;
+              background-position: 50%;
+            }
+          }
+
+          &:nth-child(2) {
+            .imgSVG {
+              background: url('../img/iconoPasoDos.svg') no-repeat;
+              background-size: 300%;
+              width: 100%;
+              height: 250px;
+              background-position: 50%;
+            }
+          }
+
+          &:nth-child(3) {
+            .imgSVG {
+              background: url('../img/iconoPasoTres.svg') no-repeat;
+              background-size: 300%;
+              width: 100%;
+              height: 250px;
+              background-position: 50%;
+            }
+          }
+
+          section {
+            font-size: 18px;
+            color: $textoBlanco;
+            font-weight: 600;
+            text-align: center;
           }
         }
-        &:nth-child(3) {
-          .imgSVG {
-            background: url('../img/iconoPasoTres.svg') no-repeat;
-            background-size: 350%;
-            width: 100%;
-            height: 250px;
-            background-position: 50%;
-          }
-        }
-  
-        section {
-          font-size: 3.5vh;
-          color: $textoBlanco;
-          font-weight: 600;
+      }
+    }
+
+    /************************** FIN SLIDE2 **************************/
+    /************************** SLIDE3 **************************/
+    #slide3 {
+      background: url("../img/fondoTres.svg") no-repeat;
+      background-size: cover;
+      z-index: 3;
+
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .titulo {
+          font-size: 20px;
           text-align: center;
+          color: $fondoAzulSecundario;
+          font-weight: 300;
+          height: 50px;
+        }
+
+        .video {
+          width: 90%;
+          height: 60vh;
+          border-radius: 8px;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-weight: 600;
+          color: $fondoAzul;
+          font-size: 25px;
+        }
+      }
+    }
+
+    /************************** FIN SLIDE3 **************************/
+
+
+    /************************ SLIDE4 *************************/
+    #slide4 {
+      background: url("../img/fondoCuatro.svg") no-repeat;
+      background-size: cover;
+      z-index: 4;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .textoDescripcion {
+          order: 2;
+          width: 90%;
+          height: 40vh;
+          align-items: flex-start;
+          text-align: center;
+          .titulo {
+            font-weight: 600;
+            font-style: normal;
+            font-size: 30px;
+            color: $fondoAzul;
+          }
+
+          .descripcion {
+            position: relative;
+            font-weight: 300;
+            font-size: 20px;
+            color: $fondoAzulSecundario;
+
+            button {
+              margin-top: 20px;
+              padding: 15px;
+              width: 200px;
+              font-size: 20px;
+              font-weight: 600;
+              outline: none;
+              border: none;
+              color: $textoBlanco;
+              border-radius: 8px;
+              background: $textoAzul;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .imagenComputadora {
+          order: 1;
+          width: 200px;
+          height: 100px;
+          background: url('../img/imgComputadora.svg') no-repeat;
+          background-size: contain;
+          background-position: 50% 50%;
+        }
+      }
+    }
+
+    #slide4 {
+      .logoEmpresa {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20vw;
+        height: 200px;
+        background: url('../img/logoSpredBlanco.svg') no-repeat;
+        background-size: contain;
+        background-position: -35px 0%;
+        cursor: pointer;
+      }
+    }
+
+    /************************ SLIDE4 *************************/
+    /************************** SLIDE3 **************************/
+    #slide5 {
+      background: url("../img/fondoCinco.svg") no-repeat;
+      background-size: cover;
+      z-index: 5;
+
+      .container {
+        width: 100%;
+        height: 74vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+          background: url('../img/logoCandado.svg') no-repeat;
+          background-size: cover;
+          width: 200px;
+          height: 200px;
+        }
+
+        .titulo {
+          flex-grow: 1;
+          font-size: 30px;
+          text-align: center;
+          color: $fondoAzul;
+          font-weight: 600;
+        }
+
+        .descripcion {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-weight: 300;
+          text-align: center;
+          width: 90%;
+          color: $fondoAzulSecundario;
+          font-size: 20px;
+        }
+      }
+    }
+
+    /************************** FIN SLIDE3 **************************/
+    /************************** SLIDE6 **************************/
+    #slide6 {
+      background: url("../img/fondoDos.svg") no-repeat;
+      background-size: cover;
+      transform: scaleX(-1);
+      z-index: 6;
+
+      .logoAbajo {
+        transform: scaleX(-1);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        section {
+          background: url('../img/logoSpredBlanco.svg') no-repeat;
+          background-size: cover;
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      .container {
+        width: 100%;
+        margin: auto;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $textoBlanco;
+        transform: scaleX(-1);
+        border-radius: 20px;
+
+        .imagen {
+          width: 50%;
+          background: url('../img/imgComputadora.svg') no-repeat;
+          background-size: cover;
+          height: 300px;
+        }
+
+        .formularioContacto {
+          width: 90%;
+
+          section {
+            text-align: center;
+            color: $fondoAzul;
+            font-size: 20px;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input,
+            textarea {
+              width: 90%;
+              outline: none;
+              padding: 7px;
+              border: 1px solid $fondoAzul;
+              border-radius: 10px;
+              margin-bottom: 5px;
+            }
+
+            button {
+              width: 100%;
+              padding: 10px;
+              background: $fondoAzul;
+              outline: none;
+              border: none;
+              border-radius: 10px;
+              color: $textoBlanco;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+          }
         }
       }
     }
   }
-  /************************** FIN SLIDE2 **************************/
-  /************************** SLIDE3 **************************/
-  #slide3 {
-    background: url("../img/fondoTres.svg") no-repeat;
-    background-size: cover;
-    z-index: 3;
-    .container {
-      width: 100%;
-      .titulo {
-        font-size: 6vh;
-        text-align: center;
-        color: $fondoAzulSecundario;
-        font-weight: 300;
-        height: 70px;
-      }
-      .video {
-        height: 60vh;
-        border-radius: 8px;
-        box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.45);
+}
+
+/**************** FIN *********************/
+/**************** PARA EL RESTO DE DISPOSITIVOS ****************/
+@media screen and (min-width: 701px) { 
+
+  .menuNavegacionMobile {
+    display: none;
+  }
+
+  .menuNavegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 7;
+    
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: flex-end;
+      margin-top: 30px;
+      li {
+         a {
+           text-decoration: none;
+           color: darken($textoAzul, 10);
+         }
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        width: 130px;
+        cursor: pointer;
+        font-size: 11pt;
         font-weight: 600;
-        color: $fondoAzul;
-        font-size: 12vh;
+        height: 30px;
+  
+        i {
+          font-size: 20pt;
+        }
+  
+        &:nth-child(1) {
+           width: 50px;
+        }
+        &:nth-child(4) {
+           border-right: 1px solid $fondoTurqueza;
+        }
       }
     }
+  }
+  
+  /******************* MENU NAVEGACION ******************/
+  .container-main {
+   perspective: 1px;
+   transform-style: preserve-3d;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   height: 100vh;
+   min-height: 100vh;
+   .slide {
+     position: relative;
+     padding: 20vh 10%;
+     min-height: 100vh;
+     width: 100vw;
+     height: 100vh;
+     box-sizing: border-box;
+     // box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+     transform-style: inherit;
+   }
+   
+   /************************ SLIDE1 *************************/
+   #slide1 {
+     background: url("../img/fondoUno.svg") no-repeat;
+     transform: translateZ(-1px) scale(2);
+     background-size: cover;
+     z-index: 1;
+     .container {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       .textoDescripcion {
+         width: 50%;
+         height: 30vh;
+         align-items: flex-start;
+         .titulo {
+           font-weight: 600;
+           font-style: normal;
+           font-size: 5vh;
+           color: lighten($textoAzul, 20);
+         }
+         .descripcion {
+           position: relative;
+           font-weight: 300;
+           font-size: 5vh;
+           color: lighten($textoAzul, 20);
+           button {
+             margin-top: 20px;
+             padding: 15px;
+             width: 400px;
+             font-size: 3vh;
+             font-weight: 600;
+             outline: none;
+             border: none;
+             color: $textoBlanco;
+             border-radius: 8px;
+             background: $textoAzul;
+             cursor: pointer;
+           }
+         }
+       }
+       .imagenComputadora {
+         width: 50%;
+         height: 90vh;
+         background: url('../img/imgComputadora.svg') no-repeat;
+         background-size: cover;
+         background-position: 50% 50%;
+       }
+     }
+   }
+   
+   #slide1 {
+     .logoEmpresa {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 20vw;
+       height: 200px;
+       background: url('../img/logoSpredBlanco.svg') no-repeat;
+       background-size: contain;
+       background-position: -35px 0%;
+       cursor: pointer;
+     }
+   }
+   
+   /************************ SLIDE1 *************************/
+   
+   /************************** SLIDE2 **************************/
+   #slide2 {
+     background: url("../img/fondoDos.svg") no-repeat;
+     background-size: cover;
+     z-index: 2;
+     .container {
+       width: 80%;
+       margin: auto;
+       height: 50vh;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+       .icono {
+         flex-grow: 1;
+         height: 40vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         &:nth-child(1) {
+           .imgSVG {
+             background: url('../img/iconoPasoUno.svg') no-repeat;
+             background-size: 350%;
+             width: 100%;
+             height: 250px;
+             background-position: 50%;
+           }
+         }
+         &:nth-child(2) {
+           .imgSVG {
+             background: url('../img/iconoPasoDos.svg') no-repeat;
+             background-size: 350%;
+             width: 100%;
+             height: 250px;
+             background-position: 50%;
+           }
+         }
+         &:nth-child(3) {
+           .imgSVG {
+             background: url('../img/iconoPasoTres.svg') no-repeat;
+             background-size: 350%;
+             width: 100%;
+             height: 250px;
+             background-position: 50%;
+           }
+         }
+   
+         section {
+           font-size: 3.5vh;
+           color: $textoBlanco;
+           font-weight: 600;
+           text-align: center;
+         }
+       }
+     }
+   }
+   /************************** FIN SLIDE2 **************************/
+   /************************** SLIDE3 **************************/
+   #slide3 {
+     background: url("../img/fondoTres.svg") no-repeat;
+     background-size: cover;
+     z-index: 3;
+     .container {
+       width: 100%;
+       .titulo {
+         font-size: 6vh;
+         text-align: center;
+         color: $fondoAzulSecundario;
+         font-weight: 300;
+         height: 70px;
+       }
+       .video {
+         height: 60vh;
+         border-radius: 8px;
+         box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.45);
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         font-weight: 600;
+         color: $fondoAzul;
+         font-size: 12vh;
+       }
+     }
+   }
+   
+   /************************** FIN SLIDE3 **************************/
+   
+   
+   /************************ SLIDE4 *************************/
+   #slide4 {
+     background: url("../img/fondoCuatro.svg") no-repeat;
+     background-size: cover;
+     z-index: 4;
+     .container {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       .textoDescripcion {
+         width: 50%;
+         height: 40vh;
+         align-items: flex-start;
+         .titulo {
+           font-weight: 600;
+           font-style: normal;
+           font-size: 11vh;
+           color: $fondoAzul;
+         }
+         .descripcion {
+           position: relative;
+           font-weight: 300;
+           font-size: 3vh;
+           color: $fondoAzulSecundario;
+           button {
+             margin-top: 20px;
+             padding: 15px;
+             width: 400px;
+             font-size: 3vh;
+             font-weight: 600;
+             outline: none;
+             border: none;
+             color: $textoBlanco;
+             border-radius: 8px;
+             background: $textoAzul;
+             cursor: pointer;
+           }
+         }
+       }
+       .imagenComputadora {
+         width: 50%;
+         height: 60vh;
+         background: url('../img/imgComputadora.svg') no-repeat;
+         background-size: cover;
+         background-position: 50% 50%;
+       }
+     }
+   }
+   
+   #slide4 {
+     .logoEmpresa {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 20vw;
+       height: 200px;
+       background: url('../img/logoSpredBlanco.svg') no-repeat;
+       background-size: contain;
+       background-position: -35px 0%;
+       cursor: pointer;
+     }
+   }
+   
+   /************************ SLIDE4 *************************/
+  /************************** SLIDE3 **************************/
+  #slide5 {
+   background: url("../img/fondoCinco.svg") no-repeat;
+   background-size: cover;
+   z-index: 5;
+   .container {
+     width: 100%;
+     height: 55vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     .logo {
+       background: url('../img/logoCandado.svg') no-repeat;
+       background-size: cover;
+       width: 200px;
+       height: 200px;
+     }
+     .titulo {
+       font-size: 6vh;
+       text-align: center;
+       color: $fondoAzul;
+       font-weight: 600;
+       height: 70px;
+     }
+     .descripcion {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       font-weight: 300;
+       text-align: center;
+       width: 80vh;
+       color: $fondoAzulSecundario;
+       font-size: 3vh;
+     }
+   }
   }
   
   /************************** FIN SLIDE3 **************************/
-  
-  
-  /************************ SLIDE4 *************************/
-  #slide4 {
-    background: url("../img/fondoCuatro.svg") no-repeat;
-    background-size: cover;
-    z-index: 4;
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      .textoDescripcion {
-        width: 50%;
-        height: 40vh;
-        align-items: flex-start;
-        .titulo {
-          font-weight: 600;
-          font-style: normal;
-          font-size: 11vh;
-          color: $fondoAzul;
-        }
-        .descripcion {
-          position: relative;
-          font-weight: 300;
-          font-size: 3vh;
-          color: $fondoAzulSecundario;
-          button {
-            margin-top: 20px;
-            padding: 15px;
-            width: 400px;
-            font-size: 3vh;
-            font-weight: 600;
-            outline: none;
-            border: none;
-            color: $textoBlanco;
-            border-radius: 8px;
-            background: $textoAzul;
-            cursor: pointer;
-          }
-        }
-      }
-      .imagenComputadora {
-        width: 50%;
-        height: 60vh;
-        background: url('../img/imgComputadora.svg') no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-      }
-    }
-  }
-  
-  #slide4 {
-    .logoEmpresa {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 20vw;
-      height: 200px;
-      background: url('../img/logoSpredBlanco.svg') no-repeat;
-      background-size: contain;
-      background-position: -35px 0%;
-      cursor: pointer;
-    }
-  }
-  
-  /************************ SLIDE4 *************************/
- /************************** SLIDE3 **************************/
- #slide5 {
-  background: url("../img/fondoCinco.svg") no-repeat;
-  background-size: cover;
-  z-index: 5;
-  .container {
-    width: 100%;
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .logo {
-      background: url('../img/logoCandado.svg') no-repeat;
-      background-size: cover;
-      width: 200px;
-      height: 200px;
-    }
-    .titulo {
-      font-size: 6vh;
-      text-align: center;
-      color: $fondoAzul;
-      font-weight: 600;
-      height: 70px;
-    }
-    .descripcion {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-weight: 300;
-      text-align: center;
-      width: 80vh;
-      color: $fondoAzulSecundario;
-      font-size: 3vh;
-    }
-  }
-}
-
-/************************** FIN SLIDE3 **************************/
-/************************** SLIDE6 **************************/
-#slide6 {
-  background: url("../img/fondoDos.svg") no-repeat;
-  background-size: cover;
-  transform: scaleX(-1);
-  z-index: 6;
-  .logoAbajo {
-    transform: scaleX(-1);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    section {
-      background: url('../img/logoSpredBlanco.svg') no-repeat;
-      background-size: cover;
-      width: 200px;
-      height: 100px;
-    }
-  }
-  .container {
-    width: 80%;
-    margin: auto;
-    height: 60vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background: $textoBlanco;
-    transform: scaleX(-1);
-    border-radius: 20px;
-    .imagen {
-      width: 50%;
-      background: url('../img/imgComputadora.svg') no-repeat;
-      background-size: cover;
-      height: 300px; 
-    }
-    .formularioContacto {
-      width: 50%;
-      section {
-        text-align: center;
-        color: $fondoAzul;
-        font-size: 5vh;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        input, textarea {
-          width: 70%;
-          outline: none;
-          padding: 7px;
-          border: 1px solid $fondoAzul;
-          border-radius: 10px;
-          margin-bottom: 5px;
-        }
-        button {
-          width: 300px;
-          padding: 10px;
-          background: $fondoAzul;
-          outline: none;
-          border: none;
-          border-radius: 10px;
-          color: $textoBlanco;
-        }
-      }
-    }
+  /************************** SLIDE6 **************************/
+  #slide6 {
+   background: url("../img/fondoDos.svg") no-repeat;
+   background-size: cover;
+   transform: scaleX(-1);
+   z-index: 6;
+   .logoAbajo {
+     transform: scaleX(-1);
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     section {
+       background: url('../img/logoSpredBlanco.svg') no-repeat;
+       background-size: cover;
+       width: 200px;
+       height: 100px;
+     }
+   }
+   .container {
+     width: 80%;
+     margin: auto;
+     height: 60vh;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     background: $textoBlanco;
+     transform: scaleX(-1);
+     border-radius: 20px;
+     .imagen {
+       width: 50%;
+       background: url('../img/imgComputadora.svg') no-repeat;
+       background-size: cover;
+       height: 300px; 
+     }
+     .formularioContacto {
+       width: 50%;
+       section {
+         text-align: center;
+         color: $fondoAzul;
+         font-size: 5vh;
+       }
+       form {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         input, textarea {
+           width: 70%;
+           outline: none;
+           padding: 7px;
+           border: 1px solid $fondoAzul;
+           border-radius: 10px;
+           margin-bottom: 5px;
+         }
+         button {
+           width: 300px;
+           padding: 10px;
+           background: $fondoAzul;
+           outline: none;
+           border: none;
+           border-radius: 10px;
+           color: $textoBlanco;
+         }
+       }
+     }
+   }
   }
 }
 }
+/********************** FIN ******************************/
+ /******************* MENU NAVEGACION ******************/
