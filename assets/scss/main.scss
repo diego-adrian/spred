@@ -77,15 +77,31 @@ body {
     }
   }
 
-  /******************* MENU NAVEGACION ******************/
-  .container-main {
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 100vh;
-    min-height: 100vh;
+  #bg1 {
+    background: none !important;
+  }
 
+  #bg2 {
+    background: none !important;
+  }
+
+  #bg3 {
+    background: none !important;
+  }
+
+  #bg4 {
+    background: none !important;
+  }
+
+  #bg5 {
+    background: none !important;
+  }
+
+  #bg6 {
+    background: none !important;
+  }
+
+  /******************* MENU NAVEGACION ******************/
     .slide {
       position: relative;
       padding: 20vh 10%;
@@ -96,6 +112,7 @@ body {
       // box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
       transform-style: inherit;
     }
+
 
     /************************ SLIDE1 *************************/
     #slide1 {
@@ -110,6 +127,7 @@ body {
         justify-content: center;
         width: 100%;
         text-align: center;
+        margin-top: -15px;
         .textoDescripcion {
           order: 2;
           width: 100%;
@@ -128,12 +146,10 @@ body {
             font-weight: 300;
             font-size: 23px;
             color: lighten($textoAzul, 20);
-
             button {
-              margin-top: 20px;
-              padding: 15px;
+              padding: 10px;
               width: 80%;
-              font-size: 3vh;
+              font-size: 2.5vh;
               font-weight: 600;
               outline: none;
               border: none;
@@ -182,17 +198,17 @@ body {
       .container {
         width: 80%;
         margin: auto;
-        height: 74vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
-
+        justify-content: flex-start;
+        margin-top: -140px;
         .icono {
           flex-grow: 1;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           height: 30vh;
           &:nth-child(1) {
@@ -479,7 +495,6 @@ body {
         }
       }
     }
-  }
 }
 
 /**************** FIN *********************/

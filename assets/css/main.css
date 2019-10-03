@@ -168,27 +168,32 @@ body {
     display: none;
   }
 
-  /******************* MENU NAVEGACION ******************/
-  .container-main {
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 100vh;
-    min-height: 100vh;
-    /************************ SLIDE1 *************************/
-    /************************ SLIDE1 *************************/
-    /************************** SLIDE2 **************************/
-    /************************** FIN SLIDE2 **************************/
-    /************************** SLIDE3 **************************/
-    /************************** FIN SLIDE3 **************************/
-    /************************ SLIDE4 *************************/
-    /************************ SLIDE4 *************************/
-    /************************** SLIDE3 **************************/
-    /************************** FIN SLIDE3 **************************/
-    /************************** SLIDE6 **************************/
+  #bg1 {
+    background: none !important;
   }
-  .container-main .slide {
+
+  #bg2 {
+    background: none !important;
+  }
+
+  #bg3 {
+    background: none !important;
+  }
+
+  #bg4 {
+    background: none !important;
+  }
+
+  #bg5 {
+    background: none !important;
+  }
+
+  #bg6 {
+    background: none !important;
+  }
+
+  /******************* MENU NAVEGACION ******************/
+  .slide {
     position: relative;
     padding: 20vh 10%;
     min-height: 100vh;
@@ -197,42 +202,44 @@ body {
     box-sizing: border-box;
     transform-style: inherit;
   }
-  .container-main #slide1 {
+
+  /************************ SLIDE1 *************************/
+  #slide1 {
     background: url("../img/fondoUno.svg") no-repeat;
     background-size: cover;
     z-index: 1;
   }
-  .container-main #slide1 .container {
+  #slide1 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     text-align: center;
+    margin-top: -15px;
   }
-  .container-main #slide1 .container .textoDescripcion {
+  #slide1 .container .textoDescripcion {
     order: 2;
     width: 100%;
     height: 30vh;
     align-items: center;
   }
-  .container-main #slide1 .container .textoDescripcion .titulo {
+  #slide1 .container .textoDescripcion .titulo {
     font-weight: 600;
     font-style: normal;
     font-size: 23px;
     color: #8eb3e7;
   }
-  .container-main #slide1 .container .textoDescripcion .descripcion {
+  #slide1 .container .textoDescripcion .descripcion {
     position: relative;
     font-weight: 300;
     font-size: 23px;
     color: #8eb3e7;
   }
-  .container-main #slide1 .container .textoDescripcion .descripcion button {
-    margin-top: 20px;
-    padding: 15px;
+  #slide1 .container .textoDescripcion .descripcion button {
+    padding: 10px;
     width: 80%;
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: 600;
     outline: none;
     border: none;
@@ -242,7 +249,7 @@ body {
     cursor: pointer;
     margin: auto;
   }
-  .container-main #slide1 .container .imagenComputadora {
+  #slide1 .container .imagenComputadora {
     order: 1;
     width: 100%;
     height: 40vh;
@@ -250,7 +257,8 @@ body {
     background-size: contain;
     background-position: 50% 50%;
   }
-  .container-main #slide1 .logoEmpresa {
+
+  #slide1 .logoEmpresa {
     position: fixed;
     top: 0;
     right: 0;
@@ -261,75 +269,82 @@ body {
     background-position: 0% -22px;
     cursor: pointer;
   }
-  .container-main #slide2 {
+
+  /************************ SLIDE1 *************************/
+  /************************** SLIDE2 **************************/
+  #slide2 {
     background: url("../img/fondoDos.svg") no-repeat;
     background-size: cover;
     z-index: 2;
   }
-  .container-main #slide2 .container {
+  #slide2 .container {
     width: 80%;
     margin: auto;
-    height: 74vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-top: -140px;
   }
-  .container-main #slide2 .container .icono {
+  #slide2 .container .icono {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 30vh;
   }
-  .container-main #slide2 .container .icono:nth-child(1) .imgSVG {
+  #slide2 .container .icono:nth-child(1) .imgSVG {
     background: url("../img/iconoPasoUno.svg") no-repeat;
     background-size: 300%;
     width: 100%;
     height: 250px;
     background-position: 50%;
   }
-  .container-main #slide2 .container .icono:nth-child(2) .imgSVG {
+  #slide2 .container .icono:nth-child(2) .imgSVG {
     background: url("../img/iconoPasoDos.svg") no-repeat;
     background-size: 300%;
     width: 100%;
     height: 250px;
     background-position: 50%;
   }
-  .container-main #slide2 .container .icono:nth-child(3) .imgSVG {
+  #slide2 .container .icono:nth-child(3) .imgSVG {
     background: url("../img/iconoPasoTres.svg") no-repeat;
     background-size: 300%;
     width: 100%;
     height: 250px;
     background-position: 50%;
   }
-  .container-main #slide2 .container .icono section {
+  #slide2 .container .icono section {
     font-size: 18px;
     color: #FFF;
     font-weight: 600;
     text-align: center;
   }
-  .container-main #slide3 {
+
+  /************************** FIN SLIDE2 **************************/
+  /************************** SLIDE3 **************************/
+  #slide3 {
     background: url("../img/fondoTres.svg") no-repeat;
     background-size: cover;
     z-index: 3;
   }
-  .container-main #slide3 .container {
+  #slide3 .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
   }
-  .container-main #slide3 .container .titulo {
+  #slide3 .container .titulo {
     font-size: 20px;
     text-align: center;
     color: #6397D6;
     font-weight: 300;
     height: 50px;
   }
-  .container-main #slide3 .container .video {
+  #slide3 .container .video {
     width: 90%;
     height: 60vh;
     border-radius: 8px;
@@ -342,38 +357,41 @@ body {
     color: #194076;
     font-size: 25px;
   }
-  .container-main #slide4 {
+
+  /************************** FIN SLIDE3 **************************/
+  /************************ SLIDE4 *************************/
+  #slide4 {
     background: url("../img/fondoCuatro.svg") no-repeat;
     background-size: cover;
     z-index: 4;
   }
-  .container-main #slide4 .container {
+  #slide4 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-  .container-main #slide4 .container .textoDescripcion {
+  #slide4 .container .textoDescripcion {
     order: 2;
     width: 90%;
     height: 40vh;
     align-items: flex-start;
     text-align: center;
   }
-  .container-main #slide4 .container .textoDescripcion .titulo {
+  #slide4 .container .textoDescripcion .titulo {
     font-weight: 600;
     font-style: normal;
     font-size: 30px;
     color: #194076;
   }
-  .container-main #slide4 .container .textoDescripcion .descripcion {
+  #slide4 .container .textoDescripcion .descripcion {
     position: relative;
     font-weight: 300;
     font-size: 20px;
     color: #6397D6;
   }
-  .container-main #slide4 .container .textoDescripcion .descripcion button {
+  #slide4 .container .textoDescripcion .descripcion button {
     margin-top: 20px;
     padding: 15px;
     width: 200px;
@@ -386,7 +404,7 @@ body {
     background: #3A7BD5;
     cursor: pointer;
   }
-  .container-main #slide4 .container .imagenComputadora {
+  #slide4 .container .imagenComputadora {
     order: 1;
     width: 200px;
     height: 100px;
@@ -394,7 +412,8 @@ body {
     background-size: contain;
     background-position: 50% 50%;
   }
-  .container-main #slide4 .logoEmpresa {
+
+  #slide4 .logoEmpresa {
     position: fixed;
     top: 0;
     left: 0;
@@ -405,12 +424,15 @@ body {
     background-position: -35px 0%;
     cursor: pointer;
   }
-  .container-main #slide5 {
+
+  /************************ SLIDE4 *************************/
+  /************************** SLIDE3 **************************/
+  #slide5 {
     background: url("../img/fondoCinco.svg") no-repeat;
     background-size: cover;
     z-index: 5;
   }
-  .container-main #slide5 .container {
+  #slide5 .container {
     width: 100%;
     height: 74vh;
     display: flex;
@@ -418,20 +440,20 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .container-main #slide5 .container .logo {
+  #slide5 .container .logo {
     background: url("../img/logoCandado.svg") no-repeat;
     background-size: cover;
     width: 200px;
     height: 200px;
   }
-  .container-main #slide5 .container .titulo {
+  #slide5 .container .titulo {
     flex-grow: 1;
     font-size: 30px;
     text-align: center;
     color: #194076;
     font-weight: 600;
   }
-  .container-main #slide5 .container .descripcion {
+  #slide5 .container .descripcion {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -443,13 +465,16 @@ body {
     color: #6397D6;
     font-size: 20px;
   }
-  .container-main #slide6 {
+
+  /************************** FIN SLIDE3 **************************/
+  /************************** SLIDE6 **************************/
+  #slide6 {
     background: url("../img/fondoDos.svg") no-repeat;
     background-size: cover;
     transform: scaleX(-1);
     z-index: 6;
   }
-  .container-main #slide6 .logoAbajo {
+  #slide6 .logoAbajo {
     transform: scaleX(-1);
     position: fixed;
     bottom: 0;
@@ -461,13 +486,13 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .container-main #slide6 .logoAbajo section {
+  #slide6 .logoAbajo section {
     background: url("../img/logoSpredBlanco.svg") no-repeat;
     background-size: cover;
     width: 200px;
     height: 100px;
   }
-  .container-main #slide6 .container {
+  #slide6 .container {
     width: 100%;
     margin: auto;
     height: 60vh;
@@ -479,28 +504,28 @@ body {
     transform: scaleX(-1);
     border-radius: 20px;
   }
-  .container-main #slide6 .container .imagen {
+  #slide6 .container .imagen {
     width: 50%;
     background: url("../img/imgComputadora.svg") no-repeat;
     background-size: cover;
     height: 300px;
   }
-  .container-main #slide6 .container .formularioContacto {
+  #slide6 .container .formularioContacto {
     width: 90%;
   }
-  .container-main #slide6 .container .formularioContacto section {
+  #slide6 .container .formularioContacto section {
     text-align: center;
     color: #194076;
     font-size: 20px;
   }
-  .container-main #slide6 .container .formularioContacto form {
+  #slide6 .container .formularioContacto form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container-main #slide6 .container .formularioContacto form input,
-.container-main #slide6 .container .formularioContacto form textarea {
+  #slide6 .container .formularioContacto form input,
+#slide6 .container .formularioContacto form textarea {
     width: 90%;
     outline: none;
     padding: 7px;
@@ -508,7 +533,7 @@ body {
     border-radius: 10px;
     margin-bottom: 5px;
   }
-  .container-main #slide6 .container .formularioContacto form button {
+  #slide6 .container .formularioContacto form button {
     width: 100%;
     padding: 10px;
     background: #194076;
