@@ -56,6 +56,8 @@
 
 #bg1 {
 	background-image: url("../img/fondoUno.svg");
+	background-size: cover;
+	background-position-x: 0;
 }
 
 #bg2 {
@@ -75,7 +77,8 @@
 }
 
 #bg6 {
-	background-image: url("../img/bg3.jpg");
+	transform: translateX(-1);
+	background-image: url("../img/fondoDos.svg");
 }
 
 .show-on-mobile--inline {

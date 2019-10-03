@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/parallax.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700" rel="stylesheet">
   <title>:: Spred ::</title>
 </head>
 <body>  
@@ -100,7 +99,6 @@
 	<section class="container container--big">
 		<div class="content">
 			<div id="slide4" class="slide">
-        <section class="logoEmpresa"></section>
         <div class="container">
           <section class="textoDescripcion">
             <section class="titulo">
@@ -142,11 +140,30 @@
 
 	<section class="container container--big">
 		<div class="content">
-			<p>
-				<strong>Container going off screen?</strong>
-				<br>
-				No sweat
-			</p>
+      <div id="slide6" class="slide">
+        <section class="logoAbajo">
+          <section></section>
+        </section>
+        <section class="container">
+          <section class="bloqueImagenes">
+            <section class="people"></section>
+            <section class="people"></section>
+            <section class="people"></section>
+            <section class="people"></section>
+            <section class="people"></section>
+          </section>
+          <section class="formularioContacto">
+            <section>Dudas, Contactanos</section>
+            <form action="#">
+              <input type="text" name="nombre" placeholder="Nombre" />
+              <input type="email" name="email" placeholder="Email" />
+              <input type="tel" name="telefono" placeholder="Telefono" />
+              <textarea name="mensaje" cols="3" rows="3" placeholder="Mensaje"></textarea>
+              <button>Enviar</button>
+            </form>
+          </section>
+        </section>
+      </div>
 		</div>
 		<div class="parallax" id="bg6"></div>
 	</section>
@@ -156,9 +173,9 @@
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/universal-parallax.min.js"></script>
 <script src="./assets/js/demo.min.js"></script>
-<script>
+<script type="text/javascript">
   new universalParallax().init({
-    speed: 4
+    speed: 5
   });
 </script>
 </html>
