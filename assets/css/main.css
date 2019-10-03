@@ -118,6 +118,10 @@ body {
 
 /************** PARA DISPOSITIVOS PEQUEÑOS *******************/
 @media screen and (min-width: 1px) and (max-width: 700px) {
+  .container--big {
+    height: 100vh !important;
+  }
+
   .menuNavegacion {
     display: none;
   }
