@@ -516,7 +516,7 @@ body {
         align-items: center;
         width: 130px;
         cursor: pointer;
-        font-size: 11pt;
+        font-size: 15px;
         font-weight: 600;
         height: 30px;
   
@@ -527,7 +527,7 @@ body {
         &:nth-child(1) {
            width: 50px;
         }
-        &:nth-child(4) {
+        &:nth-child(5) {
            border-right: 1px solid $fondoAzulSecundario;
         }
       }
@@ -548,8 +548,8 @@ body {
    #slide1 {
     .logoEmpresa {
       position: absolute;
-      top: -3vh;
-      left: -8vh;
+      top: -1vh;
+      left: -5vh;
       width: 20vw;
       height: 150px;
       background: url(../img/logoSpredBlanco.svg) no-repeat;
@@ -564,24 +564,24 @@ body {
        justify-content: center;
        width: 100%;
        .textoDescripcion {
-         width: 50%;
+         width: 55%;
          height: 40vh;
          align-items: center;
          .titulo {
            font-weight: 600;
            font-style: normal;
            font-size: 6vh;
-           color: lighten($textoAzul, 20);
+           color: $textoAzul;
          }
          .descripcion {
            position: relative;
-           font-weight: 300;
+           font-weight: 400;
            font-size: 6vh;
-           color: lighten($textoAzul, 20);
+           color: $fondoAzulSecundario;
            button {
              margin-top: 20px;
              padding: 10px;
-             width: 400px;
+             width: 200px;
              font-size: 2.5vh;
              font-weight: 600;
              outline: none;
@@ -594,7 +594,7 @@ body {
          }
        }
        .imagenComputadora {
-         width: 50%;
+         width: 45%;
          height: 70vh;
          background: url('../img/imgComputadora.svg') no-repeat;
          background-size: contain;

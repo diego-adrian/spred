@@ -550,7 +550,7 @@ body {
     align-items: center;
     width: 130px;
     cursor: pointer;
-    font-size: 11pt;
+    font-size: 15px;
     font-weight: 600;
     height: 30px;
   }
@@ -564,7 +564,7 @@ body {
   .menuNavegacion ul li:nth-child(1) {
     width: 50px;
   }
-  .menuNavegacion ul li:nth-child(4) {
+  .menuNavegacion ul li:nth-child(5) {
     border-right: 1px solid #6397D6;
   }
 
@@ -581,8 +581,8 @@ body {
   /************************ SLIDE1 *************************/
   #slide1 .logoEmpresa {
     position: absolute;
-    top: -3vh;
-    left: -8vh;
+    top: -1vh;
+    left: -5vh;
     width: 20vw;
     height: 150px;
     background: url(../img/logoSpredBlanco.svg) no-repeat;
@@ -598,7 +598,7 @@ body {
     width: 100%;
   }
   #slide1 .container .textoDescripcion {
-    width: 50%;
+    width: 55%;
     height: 40vh;
     align-items: center;
   }
@@ -606,18 +606,18 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 6vh;
-    color: #8eb3e7;
+    color: #3A7BD5;
   }
   #slide1 .container .textoDescripcion .descripcion {
     position: relative;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 6vh;
-    color: #8eb3e7;
+    color: #6397D6;
   }
   #slide1 .container .textoDescripcion .descripcion button {
     margin-top: 20px;
     padding: 10px;
-    width: 400px;
+    width: 200px;
     font-size: 2.5vh;
     font-weight: 600;
     outline: none;
@@ -628,7 +628,7 @@ body {
     cursor: pointer;
   }
   #slide1 .container .imagenComputadora {
-    width: 50%;
+    width: 45%;
     height: 70vh;
     background: url("../img/imgComputadora.svg") no-repeat;
     background-size: contain;
