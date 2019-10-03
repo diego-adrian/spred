@@ -822,38 +822,38 @@ body {
   height: 100vh;
   width: 100%;
 
-  .logoAbajo {
-    align-self: flex-end;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+  // .logoAbajo {
+  //   align-self: flex-end;
+  //   position: relative;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   width: 100%;
 
-    section {
-      background: url('../img/logoSpredBlanco.svg') no-repeat;
-      background-size: cover;
-      width: 200px;
-      height: 100px;
-    }
-  }
+  //   section {
+  //     background: url('../img/logoSpredBlanco.svg') no-repeat;
+  //     background-size: cover;
+  //     width: 200px;
+  //     height: 100px;
+  //   }
+  // }
 
   .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    margin-left: -90%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     // background: $textoBlanco;
     border-radius: 20px;
-
+    background: url('../img/animation1.svg') no-repeat;
+    background-size: cover;
+    margin-left: -11vh;
     .bloqueImagenes {
       width: 100%;
       height: 100vh;
-
       .people {
         width: 100%;
         height: 100%;
@@ -917,7 +917,7 @@ body {
     .formularioContacto {
       width: 50%;
       z-index: 2;
-      margin-left: -90vh;
+      margin-left: -75vh;
 
       section {
         text-align: center;
