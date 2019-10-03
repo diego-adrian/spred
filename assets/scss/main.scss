@@ -972,6 +972,152 @@ body {
     }
   }
 }
+/*************** slide 7 *******************************/
+
+#slide7 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    .primeraFila {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      height: 25vh;
+      section {
+        &:first-child {
+          width: 310px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-right: 40px;
+          select, .fechas {
+            padding: 10px;
+            outline: none;
+            border: 2px solid $fondoAzul;
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 300px;
+            margin-bottom: 10px;
+            color: $fondoAzulSecundario;
+          }
+        }
+
+        &:last-child {
+          width: 600px;
+          textarea {
+            padding: 10px;
+            outline: none;
+            border: 2px solid $fondoAzul;
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 500px;
+            color: $fondoAzulSecundario;
+          }
+        }
+      }
+    }
+    .segundaFila {
+      width: 100%;
+      color: $fondoAzulSecundario;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      section {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1) {
+          height: 200px;
+          section {
+            &:nth-child(1) {
+              height: 20px;
+              max-height: 20px;
+              color: $fondoAzul;
+              font-weight: 600;
+            }
+            &:nth-child(2) {
+              i {
+                font-size: 8rem;
+                color: $fondoAzul;
+              }
+            }
+            &:nth-child(3) {
+              color: $fondoAzul;
+              font-weight: 400;
+            }
+          }
+        }
+        &:nth-child(2) {
+          height: 200px;
+
+          section {
+            &:nth-child(1) {
+              height: 20px;
+              max-height: 20px;
+              color: $fondoAzul;
+              font-weight: 600;
+            }
+
+            &:nth-child(2) {
+              i {
+                font-size: 8rem;
+                color: $fondoAzul;
+              }
+            }
+
+            &:nth-child(3) {
+              color: $fondoAzul;
+              font-weight: 400;
+            }
+          }
+        }
+        &:nth-child(3) {
+          height: 200px;
+
+          section {
+            &:nth-child(1) {
+              height: 20px;
+              max-height: 20px;
+              color: $fondoAzul;
+              font-weight: 600;
+            }
+
+            &:nth-child(2) {
+              i {
+                font-size: 8rem;
+                color: $fondoAzul;
+              }
+            }
+
+            &:nth-child(3) {
+              color: $fondoAzul;
+              font-weight: 400;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/*********************** fin slide  ********************/
 }
 /********************** FIN ******************************/
  /******************* MENU NAVEGACION ******************/

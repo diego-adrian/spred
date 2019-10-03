@@ -13,10 +13,10 @@
   <nav class="menuNavegacion">
     <ul>
       <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-      <li><a href="#slide2" id="clasificados">Clasificados</a></li>
-      <li><a href="#slide3" id="anuncia">Anuncia</a></li>
-      <li><a href="#slide4">¿Cómo funciona?</a></li>
-      <li><a href="#slide5">Contacto</a></li>
+      <li><a href="#slide7" id="clasificados">Clasificados</a></li>
+      <li><a href="#slide2" id="anuncia">Anuncia</a></li>
+      <li><a href="#slide3">¿Cómo funciona?</a></li>
+      <li><a href="#slide4">Contacto</a></li>
       <li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Ignacio</a></li>
     </ul>
   </nav>
@@ -27,10 +27,10 @@
     <section id="menuLateral">
       <ul>
         <li onclick="ocultarMenu()"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li onclick="ocultarMenu()"><a href="#slide2" id="anuncia">Clasificados</a></li>
-        <li onclick="ocultarMenu()"><a href="#slide3" id="anuncia">Anuncia</a></li>
-        <li onclick="ocultarMenu()"><a href="#slide4">¿Cómo funciona?</a></li>
-        <li onclick="ocultarMenu()"><a href="#slide5">Contacto</a></li>
+        <li onclick="ocultarMenu()"><a href="#slide7" id="anuncia">Clasificados</a></li>
+        <li onclick="ocultarMenu()"><a href="#slide2" id="anuncia">Anuncia</a></li>
+        <li onclick="ocultarMenu()"><a href="#slide3">¿Cómo funciona?</a></li>
+        <li onclick="ocultarMenu()"><a href="#slide4">Contacto</a></li>
         <li onclick="ocultarMenu()"><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Ignacio</a></li>
       </ul>
     </section>
@@ -168,6 +168,77 @@
       </div>
 		</div>
 		<div class="parallax" id="bg6"></div>
+  </section>
+  
+	<section class="container container--full">
+		<div class="content">
+      <div id="slide7" class="slide">
+        <section class="container">
+          <section class="primeraFila">
+            <section>
+              <select name="opciones" placeholder="tipo de anuncio" id="opciones">
+                <option value="1">tipo de anuncio</option>
+              </select>
+              <select name="subtipo" placeholder="subtipo" id="subtipo">
+                <option value="1">Subtipo</option>
+              </select>
+              <input type="text" name="daterange" class="fechas" value="Calendario" />
+            </section>
+            <section>
+              <textarea name="queEsperas" id="" cols="30" rows="10" placeholder="">Que esperas, ¡ Escribe un anuncio !</textarea>
+            </section>
+          </section>
+          <section class="segundaFila">
+            <section>
+              <section>Simple #1</section>
+              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+              <section>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Página siete - Bs. 500</label>
+                </div>
+              </section>
+            </section>
+            <section>
+              <section>Destacado #2</section>
+              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+              <section>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Página siete - Bs. 500</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Los tiempos - Bs. 500</label>
+                </div>
+              </section>
+            </section>
+            <section>
+              <section>Destacado Pro #3</section>
+              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+              <section>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+      </div>
+		</div>
+		<div class="parallax" id="bg7"></div>
 	</section>
 
 
@@ -175,9 +246,18 @@
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/universal-parallax.min.js"></script>
 <script src="./assets/js/demo.min.js"></script>
+<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/moment.min.js"></script>
+<script type="text/javascript" src="./assets/js/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./assets/css/daterangepicker.css" />
 <script type="text/javascript">
   new universalParallax().init({
     speed: 5
   });
+  $(function () {
+      $('input[name="daterange"]').daterangepicker({
+        opens: 'right'
+      });
+    });
 </script>
 </html>
