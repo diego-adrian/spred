@@ -1090,5 +1090,11 @@ body {
 }
 /********************** FIN ******************************/
 /******************* MENU NAVEGACION ******************/
+.backgroundBlue {
+  background: #194076;
+}
+.backgroundBlue ul li a {
+  color: #FFF !important;
+}
 
 /*# sourceMappingURL=main.css.map */

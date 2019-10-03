@@ -10,7 +10,7 @@
   <title>:: Spred ::</title>
 </head>
 <body>  
-  <nav class="menuNavegacion">
+  <nav class="menuNavegacion" id="menuNavegacion">
     <ul>
       <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
       <li><a href="#slide7" id="clasificados">Clasificados</a></li>
@@ -259,5 +259,17 @@
         opens: 'right'
       });
     });
+
+    $(document).scroll(function () {
+        var element = document.getElementById('menuNavegacion');
+        console.log('------------------------------------');
+        console.log(window.scrollY);
+        console.log('------------------------------------');
+        if (window.scrollY > 200) {
+          $('#menuNavegacion').addClass('backgroundBlue');
+        } else {
+          $('#menuNavegacion').removeClass('backgroundBlue');
+        }
+      });
 </script>
 </html>

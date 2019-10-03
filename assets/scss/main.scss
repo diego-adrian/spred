@@ -1121,3 +1121,14 @@ body {
 }
 /********************** FIN ******************************/
  /******************* MENU NAVEGACION ******************/
+
+ .backgroundBlue {
+   background: $fondoAzul;
+   ul {
+     li {
+       a {
+         color: $fondoBlanco !important;
+       }
+     }
+   }
+ }
