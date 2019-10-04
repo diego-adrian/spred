@@ -262,10 +262,7 @@
 
     $(document).scroll(function () {
         var element = document.getElementById('menuNavegacion');
-        console.log('------------------------------------');
-        console.log(window.scrollY);
-        console.log('------------------------------------');
-        if (window.scrollY > 200) {
+        if (window.scrollY > window.innerHeight) {
           $('#menuNavegacion').addClass('backgroundBlue');
         } else {
           $('#menuNavegacion').removeClass('backgroundBlue');

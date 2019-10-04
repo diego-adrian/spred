@@ -1091,10 +1091,10 @@ body {
 /********************** FIN ******************************/
 /******************* MENU NAVEGACION ******************/
 .backgroundBlue {
-  background: #194076;
+  background: #FFF;
 }
 .backgroundBlue ul li a {
-  color: #FFF !important;
+  color: #3A7BD5 !important;
 }
 
 /*# sourceMappingURL=main.css.map */
