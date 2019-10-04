@@ -1123,7 +1123,23 @@ body {
  /******************* MENU NAVEGACION ******************/
 
  .backgroundBlue {
-   background: $fondoBlanco;
+   background-color: $fondoBlanco;
+   -webkit-transition: background-color 1000ms linear;
+   -ms-transition: background-color 1000ms linear;
+   transition: background-color 1000ms linear;
+   ul {
+     li {
+       a {
+         color: $textoAzul !important;
+       }
+     }
+   }
+ }
+ .backgroundTransparente {
+   background-color: transparent;
+   -webkit-transition: background-color 1000ms linear;
+   -ms-transition: background-color 1000ms linear;
+   transition: background-color 1000ms linear;
    ul {
      li {
        a {

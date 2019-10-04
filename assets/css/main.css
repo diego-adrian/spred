@@ -1091,9 +1091,22 @@ body {
 /********************** FIN ******************************/
 /******************* MENU NAVEGACION ******************/
 .backgroundBlue {
-  background: #FFF;
+  background-color: #FFF;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 .backgroundBlue ul li a {
+  color: #3A7BD5 !important;
+}
+
+.backgroundTransparente {
+  background-color: transparent;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+.backgroundTransparente ul li a {
   color: #3A7BD5 !important;
 }
 

@@ -264,8 +264,10 @@
         var element = document.getElementById('menuNavegacion');
         if (window.scrollY > window.innerHeight) {
           $('#menuNavegacion').addClass('backgroundBlue');
+          $('#menuNavegacion').removeClass('backgroundTransparente');
         } else {
           $('#menuNavegacion').removeClass('backgroundBlue');
+          $('#menuNavegacion').addClass('backgroundTransparente');
         }
       });
 </script>
