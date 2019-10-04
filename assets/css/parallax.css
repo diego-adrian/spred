@@ -85,6 +85,11 @@
 	background-image: url("../img/fondoTres.svg");
 }
 
+#bg8 {
+	transform: translateX(-1);
+	background-image: url("../img/fondoTres.svg");
+}
+
 .show-on-mobile--inline {
 	display: none;
 }
