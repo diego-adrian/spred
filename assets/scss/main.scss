@@ -104,6 +104,14 @@ body {
     background: none !important;
   }
 
+  #bg7 {
+    background: none !important;
+  }
+
+  #bg8 {
+    background: none !important;
+  }
+
   /******************* MENU NAVEGACION ******************/
     .slide {
       position: relative;
@@ -370,7 +378,6 @@ body {
       background: url("../img/fondoCinco.svg") no-repeat;
       background-size: cover;
       z-index: 5;
-
       .container {
         width: 100%;
         height: 74vh;
@@ -416,7 +423,6 @@ body {
       background-size: cover;
       transform: scaleX(-1);
       z-index: 6;
-
       .logoAbajo {
         transform: scaleX(-1);
         position: fixed;
@@ -496,15 +502,12 @@ body {
         }
       }
     }
-    /*************** slide 7 *******************************/
+/*************** slide 7 *******************************/
 
 #slide7 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
+  background: url("../img/fondoTres.svg") no-repeat;
+  background-size: cover;
+  z-index: 7;
   .container {
     display: flex;
     flex-direction: row;
@@ -514,41 +517,41 @@ body {
     height: 50vh;
     .primeraFila {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      height: 25vh;
+      height: 20vh;
       section {
         &:first-child {
-          width: 310px;
+          width: 100%;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          margin-right: 40px;
+          align-items: center;
+          justify-content: center;
           select, .fechas {
-            padding: 10px;
+            padding: 7px;
             outline: none;
-            border: 2px solid $fondoAzul;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
             background: $fondoBlanco;
             border-radius: 7px;
-            width: 300px;
-            margin-bottom: 10px;
+            width: 90%;
+            margin-bottom: 7px;
             color: $fondoAzulSecundario;
           }
         }
 
         &:last-child {
-          width: 600px;
+          width: 100%;
           textarea {
             padding: 10px;
             outline: none;
-            border: 2px solid $fondoAzul;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
             background: $fondoBlanco;
             border-radius: 7px;
-            width: 500px;
+            width: 90%;
             color: $fondoAzulSecundario;
+            height: 20vh;
           }
         }
       }
@@ -557,17 +560,17 @@ body {
       width: 100%;
       color: $fondoAzulSecundario;
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
       section {
-        width: 300px;
+        width: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         &:nth-child(1) {
-          height: 200px;
           section {
             &:nth-child(1) {
               height: 20px;
@@ -594,8 +597,7 @@ body {
           }
         }
         &:nth-child(2) {
-          height: 200px;
-
+          margin-top: 20px;
           section {
             &:nth-child(1) {
               height: 20px;
@@ -619,13 +621,11 @@ body {
               flex-direction: column;
               align-items: flex-start;
               justify-content: center;
-              margin-left: 23vh;          
             }
           }
         }
         &:nth-child(3) {
-          height: 200px;
-
+          margin-top: 20px;
           section {
             &:nth-child(1) {
               height: 20px;
@@ -649,11 +649,145 @@ body {
               flex-direction: column;
               align-items: flex-start;
               justify-content: center;
-              margin-left: 23vh;          
             }
           }
         }
+        &:nth-child(4) {
+
+          section {
+            font-size: 13px;
+            border: 2px solid rgba($color: $fondoTurqueza, $alpha: .7);
+            padding: 10px;
+            border-radius: 10px;
+          }
+          button {
+            padding: 7px;
+            background: $fondoAzulSecundario;
+            color: $textoBlanco;
+            width: 150px;
+            outline: none;
+            border-radius: 7px;
+            border: 1px solid $textoAzul;
+            margin-top: 10px !important;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+        }
         
+      }
+    }
+  }
+}
+/*************** slide 8 *******************************/
+
+#slide8 {
+  margin-top: 500px;
+  z-index: 8;
+  img {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    .primeraFila {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 20vh;
+      section {
+        &:first-child {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          select, .fechas {
+            padding: 7px;
+            outline: none;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 100%;
+            margin-bottom: 7px;
+            color: $fondoAzulSecundario;
+          }
+          .dragDrop {
+            width: 100%;
+            border: 1px dashed rgba($color: $fondoAzulSecundario, $alpha: 1);
+            color: $textoAzul;
+            padding: 10px;
+            border-radius: 7px;
+            margin-bottom: 10px;
+            font-size: 13px;
+          }
+        }
+
+        &:last-child {
+          width: 100%;
+          textarea {
+            padding: 10px;
+            outline: none;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 100%;
+            color: $fondoAzulSecundario;
+            height: 20vh;
+          }
+        }
+      }
+    }
+    .segundaFila {
+      width: 100%;
+      color: $fondoAzulSecundario;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+      }
+      .detail {
+        position: absolute;
+        right: 0;
+        top: 320px;
+        section {
+          section {
+            font-size: 13px;
+            border: 2px solid rgba($color: $fondoTurqueza, $alpha: .7);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          button {
+            align-self: flex-end;
+            padding: 7px;
+            background: $fondoAzulSecundario;
+            color: $textoBlanco;
+            width: 100%;
+            outline: none;
+            border-radius: 7px;
+            border: 1px solid $textoAzul;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
