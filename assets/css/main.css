@@ -213,6 +213,17 @@ body {
     background-size: cover;
     z-index: 1;
   }
+  #slide1 .logoEmpresa {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 200px;
+    height: 150px;
+    background: url(../img/logoSpredBlanco.svg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    cursor: pointer;
+  }
   #slide1 .container {
     display: flex;
     flex-direction: column;
@@ -260,18 +271,6 @@ body {
     background: url("../img/imgComputadora.svg") no-repeat;
     background-size: contain;
     background-position: 50% 50%;
-  }
-
-  #slide1 .logoEmpresa {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 100px;
-    background: url("../img/logoSpredBlanco.svg") no-repeat;
-    background-size: cover;
-    background-position: 0% -22px;
-    cursor: pointer;
   }
 
   /************************ SLIDE1 *************************/
@@ -499,23 +498,25 @@ body {
   #slide6 .container {
     width: 100%;
     margin: auto;
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #FFF;
     transform: scaleX(-1);
     border-radius: 20px;
+    margin-top: -160px;
   }
   #slide6 .container .imagen {
-    width: 50%;
+    order: 1;
+    width: 100%;
     background: url("../img/imgComputadora.svg") no-repeat;
     background-size: cover;
     height: 300px;
   }
   #slide6 .container .formularioContacto {
-    width: 90%;
+    order: 2;
+    width: 100%;
   }
   #slide6 .container .formularioContacto section {
     text-align: center;
@@ -548,6 +549,147 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
   }
+
+  /*************** slide 7 *******************************/
+  #slide7 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #slide7 .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+  }
+  #slide7 .container .primeraFila {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 25vh;
+  }
+  #slide7 .container .primeraFila section:first-child {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 40px;
+  }
+  #slide7 .container .primeraFila section:first-child select, #slide7 .container .primeraFila section:first-child .fechas {
+    padding: 10px;
+    outline: none;
+    border: 2px solid #194076;
+    background: #FFF;
+    border-radius: 7px;
+    width: 300px;
+    margin-bottom: 10px;
+    color: #6397D6;
+  }
+  #slide7 .container .primeraFila section:last-child {
+    width: 600px;
+  }
+  #slide7 .container .primeraFila section:last-child textarea {
+    padding: 10px;
+    outline: none;
+    border: 2px solid #194076;
+    background: #FFF;
+    border-radius: 7px;
+    width: 500px;
+    color: #6397D6;
+  }
+  #slide7 .container .segundaFila {
+    width: 100%;
+    color: #6397D6;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  #slide7 .container .segundaFila section {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #slide7 .container .segundaFila section:nth-child(1) {
+    height: 200px;
+  }
+  #slide7 .container .segundaFila section:nth-child(1) section:nth-child(1) {
+    height: 20px;
+    max-height: 20px;
+    color: #194076;
+    font-weight: 600;
+  }
+  #slide7 .container .segundaFila section:nth-child(1) section:nth-child(2) i {
+    font-size: 8rem;
+    color: #194076;
+  }
+  #slide7 .container .segundaFila section:nth-child(1) section:nth-child(3) {
+    color: #194076;
+    font-weight: 400;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 23vh;
+  }
+  #slide7 .container .segundaFila section:nth-child(2) {
+    height: 200px;
+  }
+  #slide7 .container .segundaFila section:nth-child(2) section:nth-child(1) {
+    height: 20px;
+    max-height: 20px;
+    color: #194076;
+    font-weight: 600;
+  }
+  #slide7 .container .segundaFila section:nth-child(2) section:nth-child(2) i {
+    font-size: 8rem;
+    color: #194076;
+  }
+  #slide7 .container .segundaFila section:nth-child(2) section:nth-child(3) {
+    color: #194076;
+    font-weight: 400;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 23vh;
+  }
+  #slide7 .container .segundaFila section:nth-child(3) {
+    height: 200px;
+  }
+  #slide7 .container .segundaFila section:nth-child(3) section:nth-child(1) {
+    height: 20px;
+    max-height: 20px;
+    color: #194076;
+    font-weight: 600;
+  }
+  #slide7 .container .segundaFila section:nth-child(3) section:nth-child(2) i {
+    font-size: 8rem;
+    color: #194076;
+  }
+  #slide7 .container .segundaFila section:nth-child(3) section:nth-child(3) {
+    color: #194076;
+    font-weight: 400;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 23vh;
+  }
+
+  /*********************** fin slide  ********************/
 }
 /**************** FIN *********************/
 /**************** PARA EL RESTO DE DISPOSITIVOS ****************/
@@ -579,7 +721,7 @@ body {
     align-items: center;
     width: 130px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     height: 30px;
   }
@@ -610,8 +752,8 @@ body {
   /************************ SLIDE1 *************************/
   #slide1 .logoEmpresa {
     position: absolute;
-    top: -1vh;
-    left: -5vh;
+    top: 0;
+    left: 0;
     width: 20vw;
     height: 150px;
     background: url(../img/logoSpredBlanco.svg) no-repeat;
@@ -784,7 +926,7 @@ body {
   #slide4 .container .textoDescripcion .descripcion {
     position: relative;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 3.2vh;
     color: #6397D6;
   }
   #slide4 .container .textoDescripcion .descripcion button {
@@ -864,15 +1006,19 @@ body {
   #slide6 .container {
     width: 100%;
     margin: auto;
-    height: 100vh;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     border-radius: 20px;
-    background: url("../img/animation1.svg") no-repeat;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background: url("../img/animation1.svg") #FFF no-repeat;
+    background-position-x: -11vh;
+    background-position-y: -8vh;
     background-size: cover;
-    margin-left: -11vh;
+  }
+  #slide6 .container .imagen {
+    display: none;
   }
   #slide6 .container .bloqueImagenes {
     width: 100%;
@@ -931,9 +1077,7 @@ body {
     left: -15vh;
   }
   #slide6 .container .formularioContacto {
-    width: 50%;
-    z-index: 2;
-    margin-left: -75vh;
+    width: 60%;
   }
   #slide6 .container .formularioContacto section {
     text-align: center;
@@ -987,7 +1131,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    height: 25vh;
+    height: 20vh;
   }
   #slide7 .container .primeraFila section:first-child {
     width: 310px;
@@ -998,13 +1142,13 @@ body {
     margin-right: 40px;
   }
   #slide7 .container .primeraFila section:first-child select, #slide7 .container .primeraFila section:first-child .fechas {
-    padding: 10px;
+    padding: 7px;
     outline: none;
-    border: 2px solid #194076;
+    border: 2px solid rgba(99, 151, 214, 0.7);
     background: #FFF;
     border-radius: 7px;
     width: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     color: #6397D6;
   }
   #slide7 .container .primeraFila section:last-child {
@@ -1013,11 +1157,12 @@ body {
   #slide7 .container .primeraFila section:last-child textarea {
     padding: 10px;
     outline: none;
-    border: 2px solid #194076;
+    border: 2px solid rgba(99, 151, 214, 0.7);
     background: #FFF;
     border-radius: 7px;
     width: 500px;
     color: #6397D6;
+    height: 20vh;
   }
   #slide7 .container .segundaFila {
     width: 100%;
@@ -1026,16 +1171,15 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-left: -120px;
+    margin-top: 40px;
   }
   #slide7 .container .segundaFila section {
-    width: 350px;
+    width: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  #slide7 .container .segundaFila section:nth-child(1) {
-    height: 200px;
   }
   #slide7 .container .segundaFila section:nth-child(1) section:nth-child(1) {
     height: 20px;
@@ -1050,9 +1194,12 @@ body {
   #slide7 .container .segundaFila section:nth-child(1) section:nth-child(3) {
     color: #194076;
     font-weight: 400;
-  }
-  #slide7 .container .segundaFila section:nth-child(2) {
-    height: 200px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 23vh;
   }
   #slide7 .container .segundaFila section:nth-child(2) section:nth-child(1) {
     height: 20px;
@@ -1067,9 +1214,12 @@ body {
   #slide7 .container .segundaFila section:nth-child(2) section:nth-child(3) {
     color: #194076;
     font-weight: 400;
-  }
-  #slide7 .container .segundaFila section:nth-child(3) {
-    height: 200px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 23vh;
   }
   #slide7 .container .segundaFila section:nth-child(3) section:nth-child(1) {
     height: 20px;
@@ -1084,6 +1234,140 @@ body {
   #slide7 .container .segundaFila section:nth-child(3) section:nth-child(3) {
     color: #194076;
     font-weight: 400;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 23vh;
+  }
+  #slide7 .container .segundaFila section:nth-child(4) section {
+    font-size: 13px;
+    border: 2px solid rgba(0, 210, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #slide7 .container .segundaFila section:nth-child(4) button {
+    padding: 7px;
+    background: #6397D6;
+    color: #FFF;
+    width: 150px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid #3A7BD5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  /*************** slide 8 *******************************/
+  #slide8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #slide8 .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+  }
+  #slide8 .container .primeraFila {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20vh;
+  }
+  #slide8 .container .primeraFila section:first-child {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 40px;
+  }
+  #slide8 .container .primeraFila section:first-child select, #slide8 .container .primeraFila section:first-child .fechas {
+    padding: 7px;
+    outline: none;
+    border: 2px solid rgba(99, 151, 214, 0.7);
+    background: #FFF;
+    border-radius: 7px;
+    width: 300px;
+    margin-bottom: 7px;
+    color: #6397D6;
+  }
+  #slide8 .container .primeraFila section:first-child .dragDrop {
+    width: 300px;
+    border: 1px dashed #6397d6;
+    color: #3A7BD5;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  #slide8 .container .primeraFila section:last-child {
+    width: 600px;
+  }
+  #slide8 .container .primeraFila section:last-child textarea {
+    padding: 10px;
+    outline: none;
+    border: 2px solid rgba(99, 151, 214, 0.7);
+    background: #FFF;
+    border-radius: 7px;
+    width: 500px;
+    color: #6397D6;
+    height: 20vh;
+  }
+  #slide8 .container .segundaFila {
+    width: 100%;
+    color: #6397D6;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+  }
+  #slide8 .container .segundaFila section {
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 13px;
+  }
+  #slide8 .container .segundaFila .detail {
+    position: absolute;
+    right: 0;
+    margin-right: -20vh;
+  }
+  #slide8 .container .segundaFila .detail section section {
+    font-size: 13px;
+    border: 2px solid rgba(0, 210, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #slide8 .container .segundaFila .detail section button {
+    align-self: flex-end;
+    padding: 7px;
+    background: #6397D6;
+    color: #FFF;
+    width: 150px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid #3A7BD5;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
   }
 
   /*********************** fin slide  ********************/

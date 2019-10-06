@@ -144,23 +144,24 @@
 		<div class="content">
       <div id="slide6" class="slide">
         <section class="container">
+          <section class="imagen"></section>
           <!-- <section class="logoAbajo">
             <section></section>
           </section> -->
-          <section class="bloqueImagenes">
+          <!-- <section class="bloqueImagenes">
             <section class="people"></section>
             <section class="people"></section>
             <section class="people"></section>
             <section class="people"></section>
             <section class="people"></section>
-          </section>
+          </section> -->
           <section class="formularioContacto">
             <section>Dudas, Contactanos</section>
             <form action="#">
               <input type="text" name="nombre" placeholder="Nombre" />
               <input type="email" name="email" placeholder="Email" />
               <input type="tel" name="telefono" placeholder="Telefono" />
-              <textarea name="mensaje" cols="3" rows="3" placeholder="Mensaje"></textarea>
+              <textarea name="mensaje" cols="3" rows="2" placeholder="Mensaje"></textarea>
               <button>Enviar</button>
             </form>
           </section>
@@ -191,7 +192,9 @@
           <section class="segundaFila">
             <section>
               <section>Simple #1</section>
-              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+              <section>
+                <img src="./assets/img/simple1.png" alt="" width="200" height="100">
+              </section>
               <section>
                 <div>
                   <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
@@ -206,7 +209,9 @@
             </section>
             <section>
               <section>Destacado #2</section>
-              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+              <section>
+                <img src="./assets/img/destacado.png" alt="" width="200" height="100">
+              </section>
               <section>
                 <div>
                   <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
@@ -224,7 +229,9 @@
             </section>
             <section>
               <section>Destacado Pro #3</section>
-              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+              <section>
+                <img src="./assets/img/pro.png" alt="" width="200" height="100">
+              </section>
               <section>
                 <div>
                   <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
@@ -233,6 +240,14 @@
                   <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
                 </div>
               </section>
+            </section>
+            <section>
+              <section>
+                <strong>Necesitas Inspiracion</strong> <br>
+                Descarga nuestras plantillas <br>
+                <button>Haz click aqui</button>
+              </section>
+              <button style="margin-top: 100px">Ir al carrito</button>
             </section>
           </section>
         </section>
@@ -252,58 +267,38 @@
                 <option value="1">tipo de anuncio</option>
               </select>
               <select name="subtipo" placeholder="subtipo" id="subtipo">
-                <option value="1">Subtipo</option>
+                <option value="1">Tamano de la imagen</option>
               </select>
+              <div class="dragDrop">Arrastra la imagen o <strong style="cursor: pointer">explora</strong> desde tu computadora</div>
               <input type="text" name="daterange" class="fechas" value="Calendario" />
             </section>
-            <section>
-              <textarea name="queEsperas" id="" cols="30" rows="10" placeholder="">Que esperas, ¡ Escribe un anuncio !</textarea>
+            <section >
+              <img src="./assets/img/grafico.png" width="350px" height="400px"/>
             </section>
           </section>
           <section class="segundaFila">
             <section>
-              <section>Simple #1</section>
-              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
-              <section>
-                <div>
-                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Página siete - Bs. 500</label>
-                </div>
-              </section>
+              <div>
+                <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+              </div>
+              <div>
+                <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+              </div>
+              <div>
+                <input type="checkbox" id="scales" name="scales"> <label for="scales">Pagina Siete - Bs. 500</label>
+              </div>
+              <div>
+                <input type="checkbox" id="scales" name="scales"> <label for="scales">Los tiempos - Bs. 380</label>
+              </div>
             </section>
-            <section>
-              <section>Destacado #2</section>
-              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
+            <section class="detail">
               <section>
-                <div>
-                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Página siete - Bs. 500</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Los tiempos - Bs. 500</label>
-                </div>
-              </section>
-            </section>
-            <section>
-              <section>Destacado Pro #3</section>
-              <section><i class="fa fa-id-card-o" aria-hidden="true"></i></section>
-              <section>
-                <div>
-                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
-                </div>
+                <section>
+                  <strong>Necesitas Inspiracion</strong> <br>
+                  Descarga nuestras plantillas <br>
+                  <button>Haz click aqui</button>
+                </section>
+                <button>Ir al carrito</button>
               </section>
             </section>
           </section>

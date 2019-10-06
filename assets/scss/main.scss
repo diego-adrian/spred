@@ -123,6 +123,17 @@ body {
       background-size: cover;
       z-index: 1;
 
+      .logoEmpresa {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        width: 200px;
+        height: 150px;
+        background: url(../img/logoSpredBlanco.svg) no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        cursor: pointer;
+      }
       .container {
         display: flex;
         flex-direction: column;
@@ -173,20 +184,6 @@ body {
           background-size: contain;
           background-position: 50% 50%;
         }
-      }
-    }
-
-    #slide1 {
-      .logoEmpresa {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 150px;
-        height: 100px;
-        background: url('../img/logoSpredBlanco.svg') no-repeat;
-        background-size: cover;
-        background-position: 0% -22px;
-        cursor: pointer;
       }
     }
 
@@ -442,24 +439,25 @@ body {
       .container {
         width: 100%;
         margin: auto;
-        height: 60vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: $textoBlanco;
         transform: scaleX(-1);
         border-radius: 20px;
-
+        margin-top: -160px;
         .imagen {
-          width: 50%;
+          order: 1;
+          width: 100%;
           background: url('../img/imgComputadora.svg') no-repeat;
           background-size: cover;
           height: 300px;
         }
 
         .formularioContacto {
-          width: 90%;
+          order: 2;
+          width: 100%;
 
           section {
             text-align: center;
@@ -498,6 +496,170 @@ body {
         }
       }
     }
+    /*************** slide 7 *******************************/
+
+#slide7 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    .primeraFila {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      height: 25vh;
+      section {
+        &:first-child {
+          width: 310px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-right: 40px;
+          select, .fechas {
+            padding: 10px;
+            outline: none;
+            border: 2px solid $fondoAzul;
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 300px;
+            margin-bottom: 10px;
+            color: $fondoAzulSecundario;
+          }
+        }
+
+        &:last-child {
+          width: 600px;
+          textarea {
+            padding: 10px;
+            outline: none;
+            border: 2px solid $fondoAzul;
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 500px;
+            color: $fondoAzulSecundario;
+          }
+        }
+      }
+    }
+    .segundaFila {
+      width: 100%;
+      color: $fondoAzulSecundario;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      section {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1) {
+          height: 200px;
+          section {
+            &:nth-child(1) {
+              height: 20px;
+              max-height: 20px;
+              color: $fondoAzul;
+              font-weight: 600;
+            }
+            &:nth-child(2) {
+              i {
+                font-size: 8rem;
+                color: $fondoAzul;
+              }
+            }
+            &:nth-child(3) {
+              color: $fondoAzul;
+              font-weight: 400;
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin-left: 23vh;          
+            }
+          }
+        }
+        &:nth-child(2) {
+          height: 200px;
+
+          section {
+            &:nth-child(1) {
+              height: 20px;
+              max-height: 20px;
+              color: $fondoAzul;
+              font-weight: 600;
+            }
+
+            &:nth-child(2) {
+              i {
+                font-size: 8rem;
+                color: $fondoAzul;
+              }
+            }
+
+            &:nth-child(3) {
+              color: $fondoAzul;
+              font-weight: 400;
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin-left: 23vh;          
+            }
+          }
+        }
+        &:nth-child(3) {
+          height: 200px;
+
+          section {
+            &:nth-child(1) {
+              height: 20px;
+              max-height: 20px;
+              color: $fondoAzul;
+              font-weight: 600;
+            }
+
+            &:nth-child(2) {
+              i {
+                font-size: 8rem;
+                color: $fondoAzul;
+              }
+            }
+
+            &:nth-child(3) {
+              color: $fondoAzul;
+              font-weight: 400;
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin-left: 23vh;          
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/*********************** fin slide  ********************/
 }
 
 /**************** FIN *********************/
@@ -534,7 +696,7 @@ body {
         align-items: center;
         width: 130px;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         height: 30px;
   
@@ -566,8 +728,8 @@ body {
    #slide1 {
     .logoEmpresa {
       position: absolute;
-      top: -1vh;
-      left: -5vh;
+      top: 0;
+      left: 0;
       width: 20vw;
       height: 150px;
       background: url(../img/logoSpredBlanco.svg) no-repeat;
@@ -754,7 +916,7 @@ body {
         .descripcion {
           position: relative;
           font-weight: 300;
-          font-size: 3vh;
+          font-size: 3.2vh;
           color: $fondoAzulSecundario;
 
           button {
@@ -859,16 +1021,19 @@ body {
   .container {
     width: 100%;
     margin: auto;
-    height: 100vh;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    // background: $textoBlanco;
     border-radius: 20px;
-    background: url('../img/animation1.svg') no-repeat;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background: url('../img/animation1.svg') $textoBlanco no-repeat;
+    background-position-x: -11vh;
+    background-position-y: -8vh;
     background-size: cover;
-    margin-left: -11vh;
+    .imagen {
+      display: none;
+    }
     .bloqueImagenes {
       width: 100%;
       height: 100vh;
@@ -933,10 +1098,7 @@ body {
     }
 
     .formularioContacto {
-      width: 50%;
-      z-index: 2;
-      margin-left: -75vh;
-
+      width: 60%;
       section {
         text-align: center;
         color: $fondoAzul;
@@ -994,7 +1156,7 @@ body {
       align-items: flex-start;
       justify-content: flex-start;
       width: 100%;
-      height: 25vh;
+      height: 20vh;
       section {
         &:first-child {
           width: 310px;
@@ -1004,13 +1166,13 @@ body {
           justify-content: flex-start;
           margin-right: 40px;
           select, .fechas {
-            padding: 10px;
+            padding: 7px;
             outline: none;
-            border: 2px solid $fondoAzul;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
             background: $fondoBlanco;
             border-radius: 7px;
             width: 300px;
-            margin-bottom: 10px;
+            margin-bottom: 7px;
             color: $fondoAzulSecundario;
           }
         }
@@ -1020,11 +1182,12 @@ body {
           textarea {
             padding: 10px;
             outline: none;
-            border: 2px solid $fondoAzul;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
             background: $fondoBlanco;
             border-radius: 7px;
             width: 500px;
             color: $fondoAzulSecundario;
+            height: 20vh;
           }
         }
       }
@@ -1036,14 +1199,15 @@ body {
       flex-direction: row;
       align-items: flex-start;
       justify-content: flex-start;
+      margin-left: -120px;
+      margin-top: 40px;
       section {
-        width: 350px;
+        width: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         &:nth-child(1) {
-          height: 200px;
           section {
             &:nth-child(1) {
               height: 20px;
@@ -1060,11 +1224,16 @@ body {
             &:nth-child(3) {
               color: $fondoAzul;
               font-weight: 400;
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin-left: 23vh;          
             }
           }
         }
         &:nth-child(2) {
-          height: 200px;
 
           section {
             &:nth-child(1) {
@@ -1084,11 +1253,16 @@ body {
             &:nth-child(3) {
               color: $fondoAzul;
               font-weight: 400;
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin-left: 23vh;          
             }
           }
         }
         &:nth-child(3) {
-          height: 200px;
 
           section {
             &:nth-child(1) {
@@ -1108,10 +1282,153 @@ body {
             &:nth-child(3) {
               color: $fondoAzul;
               font-weight: 400;
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin-left: 23vh;          
             }
           }
         }
+        &:nth-child(4) {
+
+          section {
+            font-size: 13px;
+            border: 2px solid rgba($color: $fondoTurqueza, $alpha: .7);
+            padding: 10px;
+            border-radius: 10px;
+          }
+          button {
+            padding: 7px;
+            background: $fondoAzulSecundario;
+            color: $textoBlanco;
+            width: 150px;
+            outline: none;
+            border-radius: 7px;
+            border: 1px solid $textoAzul;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+        }
         
+      }
+    }
+  }
+}
+/*************** slide 8 *******************************/
+
+#slide8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    .primeraFila {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      height: 20vh;
+      section {
+        &:first-child {
+          width: 310px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-right: 40px;
+          select, .fechas {
+            padding: 7px;
+            outline: none;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 300px;
+            margin-bottom: 7px;
+            color: $fondoAzulSecundario;
+          }
+          .dragDrop {
+            width: 300px;
+            border: 1px dashed rgba($color: $fondoAzulSecundario, $alpha: 1);
+            color: $textoAzul;
+            padding: 10px;
+            border-radius: 7px;
+            margin-bottom: 10px;
+            font-size: 13px;
+          }
+        }
+
+        &:last-child {
+          width: 600px;
+          textarea {
+            padding: 10px;
+            outline: none;
+            border: 2px solid rgba($color: $fondoAzulSecundario, $alpha: .7);
+            background: $fondoBlanco;
+            border-radius: 7px;
+            width: 500px;
+            color: $fondoAzulSecundario;
+            height: 20vh;
+          }
+        }
+      }
+    }
+    .segundaFila {
+      width: 100%;
+      color: $fondoAzulSecundario;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 50px;
+      section {
+        width: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 13px;
+      }
+      .detail {
+        position: absolute;
+        right: 0;
+        margin-right: -20vh;
+        section {
+          section {
+            font-size: 13px;
+            border: 2px solid rgba($color: $fondoTurqueza, $alpha: .7);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          button {
+            align-self: flex-end;
+            padding: 7px;
+            background: $fondoAzulSecundario;
+            color: $textoBlanco;
+            width: 150px;
+            outline: none;
+            border-radius: 7px;
+            border: 1px solid $textoAzul;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
