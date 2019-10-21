@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/parallax.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>.:: Clasificados ::.</title>
+</head>
+<body>
+  <nav class="menuNavegacion" id="menuNavegacion">
+    <ul>
+      <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li><a href="clasificados.html" id="clasificados">Clasificados</a></li>
+      <li><a href="anuncia.html" id="anuncia">Anuncia</a></li>
+      <li><a href="index.html#slide3">¿Cómo funciona?</a></li>
+      <li><a href="index.html#slide4">Contacto</a></li>
+      <li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Ignacio</a></li>
+    </ul>
+  </nav>
+  <nav class="menuNavegacionMobile">
+    <section class="icono" id="iconMobile" onclick="mostrarMenu()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </section>
+    <section id="menuLateral">
+      <ul>
+        <li onclick="ocultarMenu()"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li onclick="ocultarMenu()"><a href="clasificados.html" id="anuncia">Clasificados</a></li>
+        <li onclick="ocultarMenu()"><a href="anuncia.html" id="anuncia">Anuncia</a></li>
+        <li onclick="ocultarMenu()"><a href="index.html#slide3">¿Cómo funciona?</a></li>
+        <li onclick="ocultarMenu()"><a href="index.html#slide4">Contacto</a></li>
+        <li onclick="ocultarMenu()"><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Ignacio</a></li>
+      </ul>
+    </section>
+  </nav>
+  <section class="container container--full">
+		<div class="content">
+      <div id="slide7" class="slide clasificado">
+        <section class="container">
+          <section class="primeraFila">
+            <section>
+              <select name="opciones" placeholder="tipo de anuncio" id="opciones">
+                <option value="1">tipo de anuncio</option>
+              </select>
+              <select name="subtipo" placeholder="subtipo" id="subtipo">
+                <option value="1">Subtipo</option>
+              </select>
+              <input type="text" name="daterange" class="fechas" value="Calendario" />
+            </section>
+            <section>
+              <textarea name="queEsperas" id="" cols="30" rows="10" placeholder="">Que esperas, ¡ Escribe un anuncio !</textarea>
+            </section>
+          </section>
+          <section class="segundaFila">
+            <section>
+              <section>Simple #1</section>
+              <section>
+                <img src="./assets/img/simple1.png" alt="" width="200" height="100">
+              </section>
+              <section>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Página siete - Bs. 500</label>
+                </div>
+              </section>
+            </section>
+            <section>
+              <section>Destacado #2</section>
+              <section>
+                <img src="./assets/img/destacado.png" alt="" width="200" height="100">
+              </section>
+              <section>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Página siete - Bs. 500</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">Los tiempos - Bs. 500</label>
+                </div>
+              </section>
+            </section>
+            <section>
+              <section>Destacado Pro #3</section>
+              <section>
+                <img src="./assets/img/pro.png" alt="" width="200" height="100">
+              </section>
+              <section>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked> <label for="scales">La Razón - Bs. 420</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="scales" name="scales"> <label for="scales">La Prensa - Bs. 380</label>
+                </div>
+              </section>
+            </section>
+            <section>
+              <section>
+                <strong>Necesitas Inspiracion</strong> <br>
+                Descarga nuestras plantillas <br>
+                <button>Haz click aqui</button>
+              </section>
+              <button style="margin-top: 100px">Ir al carrito</button>
+            </section>
+          </section>
+        </section>
+      </div>
+		</div>
+		<div class="parallax" id="bg7"></div>
+  </section>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/universal-parallax.min.js"></script>
+<script src="./assets/js/demo.min.js"></script>
+<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/moment.min.js"></script>
+<script type="text/javascript" src="./assets/js/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./assets/css/daterangepicker.css" />
+<script type="text/javascript">
+  new universalParallax().init({
+    speed: 5
+  });
+  $(function () {
+      $('input[name="daterange"]').daterangepicker({
+        opens: 'right'
+      });
+    });
+
+    $(document).scroll(function () {
+        var element = document.getElementById('menuNavegacion');
+        if (window.scrollY > window.innerHeight) {
+          $('#menuNavegacion').addClass('backgroundBlue');
+          $('#menuNavegacion').removeClass('backgroundTransparente');
+        } else {
+          $('#menuNavegacion').removeClass('backgroundBlue');
+          $('#menuNavegacion').addClass('backgroundTransparente');
+        }
+      });
+</script>
+</body>
+</html>
